@@ -266,6 +266,18 @@ data_team2.Cost_of_Bike.value_counts(dropna=False)
 #data_team2['Status'] = data_team2['Status'].replace('RECOVERED', 1)
 #data_team2['Status'].value_counts(dropna=False)
 
+
+
+"""========================== Updated City ===================="""
+
+data_team2.loc[(data_team2['Hood_ID']<=20),'region'] = 'Etobicoke'
+data_team2.loc[(data_team2['Hood_ID']>20) & (data_team2['Hood_ID']<=53),'region'] = 'Northyork'
+data_team2.loc[(data_team2['Hood_ID']>53) & (data_team2['Hood_ID']<=61),'region'] = 'EastYork'
+data_team2.loc[(data_team2['Hood_ID']>61) & (data_team2['Hood_ID']<=105),'region'] = 'OldToronto'
+data_team2.loc[(data_team2['Hood_ID']>105) & (data_team2['Hood_ID']<=115),'region'] = 'York'
+data_team2.loc[(data_team2['Hood_ID']>115) & (data_team2['Hood_ID']<=140),'region'] = 'Scarborough'
+
+
 """======================================= City ================================"""
 # code is already run because it took 2 hours using geocode api
 """
