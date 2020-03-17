@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 12 13:57:10 2019
 
-@author: nhatk
-"""
 
 #Regions and Season
 clarity_color_table = pd.crosstab(index=df_fn["Regions"], 
